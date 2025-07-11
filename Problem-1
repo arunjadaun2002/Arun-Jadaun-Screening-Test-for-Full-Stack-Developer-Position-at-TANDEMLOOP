@@ -1,0 +1,62 @@
+#include<bits/stdc++.h>
+#include <iostream>
+using namespace std;
+
+
+class calculator{
+  private:
+  double a;
+  double b;
+  string operation;
+  
+  public:
+  calculator(double num1, double num2, string str){
+      a=num1;
+      b=num2;
+      operation=str;
+  }
+  
+  void perform(){
+      if(operation=="+"){
+          cout<<"The sum is "<<a+b;
+      }
+      else if(operation=="-"){
+          cout<<"The subtract is "<<a-b;
+      }
+      else if(operation=="*"){
+          cout<<"The multiplication is "<<a*b;
+      }
+      else if(operation=="/"){
+          if(b==0){
+              cout<<"Division by zero is not allowed "<<endl;
+          }
+          else
+          cout<<"The divide is "<<a/b;
+      }
+      else{
+          cout<<"Please enter the correct operator "; 
+      }
+      
+  }
+};
+
+int main()
+{
+    double a,b;
+    string op;
+    cout<<"Enter the first value "<<endl;
+    cin>>a;
+    
+    cout<<"Enter the second value "<<endl;
+    cin>>b;
+    
+    cout<<"Enter the operator "<<endl;
+    cin>>op;
+    
+    
+    calculator cal(a,b,op);
+    cal.perform();
+    
+
+    return 0;
+}
