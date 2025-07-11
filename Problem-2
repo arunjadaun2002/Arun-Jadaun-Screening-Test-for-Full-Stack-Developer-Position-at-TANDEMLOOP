@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+#include <iostream>
+using namespace std;
+
+
+void fun(int n){
+    int odd=1;
+    while(n){
+        cout<<odd<<" ";
+        odd+=2;
+        n--;
+        
+    }
+}
+int main()
+{
+    int n;
+    cout<<"Enter the number "<<endl;
+    cin>>n;
+  
+    if(n<=0){
+        cout<<"Please enter the positive number: ";
+    }
+    else
+     fun(n);
+
+    return 0;
+}
